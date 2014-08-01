@@ -12,6 +12,9 @@ def setfig(fig,**kwargs):
     Sets figure to 'fig' and clears; if fig is 0, does nothing (e.g. for overplotting)
 
     if fig is None (or anything else), creates new figure
+    
+    I use this for basically every function I write to make a plot.  I give the function
+    a "fig=None" kw argument, so that it will by default create a new figure.
     """
     if fig:
         plt.figure(fig,**kwargs)
@@ -23,6 +26,8 @@ def setfig(fig,**kwargs):
 
 def makemovie(plotfn,args_fixed,args,name='movie'):
     """ makes a movie out of plotfn, called with series of args (a dictionary of lists)
+    
+    Haven't actually used this successfully, I don't think.
     """
     moviefile = '%s.gif' % name
     if os.path.exists(moviefile):
@@ -58,6 +63,3 @@ def makemovie(plotfn,args_fixed,args,name='movie'):
         plt.savefig('%s/frame%i.png' % (name,i))
         plt.close()
         
-def testfn(xs,y):
-    plt.plot(xs,xs**y)
-
