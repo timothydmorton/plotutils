@@ -27,7 +27,7 @@ def setfig(fig,**kwargs):
 def makemovie(plotfn,args_fixed,args,name='movie'):
     """ makes a movie out of plotfn, called with series of args (a dictionary of lists)
     
-    Haven't actually used this successfully, I don't think.
+    Haven't actually used this yet, I don't think.
     """
     moviefile = '%s.gif' % name
     if os.path.exists(moviefile):
