@@ -17,6 +17,7 @@ You can also set the current figure to be a given figure number, clear it, and s
 I use the `setfig` function in every function that I write that makes a plot, almost always as follows:
 
 ```
+import matplotlib.pyplot as plt
 def my_plot(x,y,fig=None,**kwargs):
   setfig(fig)
   plt.plot(x,y,**kwargs)
