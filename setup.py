@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 def readme():
     with open('README.md') as f:
@@ -18,5 +18,7 @@ setup(name = "plotutils",
       'License :: OSI Approved :: GNU General Public License (GPL)',
       'Operating System :: OS Independent',
       'Programming Language :: Python',
-      ]
+      ],
+    zip_safe=False,
+    install_requires=['matplotlib']
 ) 
