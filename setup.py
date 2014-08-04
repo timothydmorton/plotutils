@@ -12,7 +12,6 @@ setup(name = "plotutils",
     author_email = "tim.morton@gmail.com",
     url = "https://github.com/timothydmorton/plotutils",
     packages = ['plotutils'],
-    zip_safe = False,
     classifiers=[
       'Development Status :: 4 - Beta',
       'Intended Audience :: Science/Research',
