@@ -7,11 +7,17 @@ def readme():
 setup(name = "plotutils",
     version = "0.1",
     description = "Simple matplotlib-related utility functions.",
-    long_descriptoin = readme(),
+    long_description = readme(),
     author = "Timothy D. Morton",
     author_email = "tim.morton@gmail.com",
     url = "https://github.com/timothydmorton/plotutils",
     packages = ['plotutils'],
-    install_requires=['matplotlib'],
-    zip_safe = False
+    zip_safe = False,
+    classifiers=[
+      'Development Status :: 4 - Beta',
+      'Intended Audience :: Science/Research',
+      'License :: OSI Approved :: GNU General Public License (GPL)',
+      'Operating System :: OS Independent',
+      'Programming Language :: Python',
+      ]
 ) 
