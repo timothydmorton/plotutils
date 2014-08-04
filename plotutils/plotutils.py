@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os,os.path,shutil
 
-def setfig(fig,**kwargs):
+def setfig(fig=None,**kwargs):
     """
     Sets figure to 'fig' and clears; if fig is 0, does nothing (e.g. for overplotting)
 
