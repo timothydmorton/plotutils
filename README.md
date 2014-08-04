@@ -1,7 +1,7 @@
 plotutils
 =========
 
-Matplotlib-related plotting utility functions I have found useful.
+This is where I keep matplotlib-related plotting utility functions I have found useful.
 
 setfig
 ------
