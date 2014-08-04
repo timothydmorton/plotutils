@@ -3,8 +3,17 @@ plotutils
 
 This is where I keep matplotlib-related plotting utility functions I have found useful.
 
-setfig
+Installation
+------------
+```
+pip install plotutils
+```
+
+Usage
 ------
+
+How to use `setfig`:
+
 This will create a new figure (same as plt.figure() call in matplotlib):
 ```python
 from plotutils.plotutils import setfig
