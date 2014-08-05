@@ -16,12 +16,10 @@ Usage
 How to use `setfig`:
 
 This will create a new figure (same as plt.figure() call in
-matplotlib):
+matplotlib)::
 
-.. code-block:: python 
-
-  from plotutils import setfig
-  setfig(None) #or setfig()
+  >>> from plotutils import setfig
+  >>> setfig(None) #or setfig()
 
 You can also set the current figure to be a given figure number, clear it, and start over, e.g.: `setfig(3)`.
 
