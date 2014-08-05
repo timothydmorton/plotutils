@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name = "plotutils",
-    version = "0.1",
+    version = "0.2",
     description = "Simple matplotlib-related utility functions.",
     long_description = readme(),
     author = "Timothy D. Morton",
@@ -13,7 +13,7 @@ setup(name = "plotutils",
     url = "https://github.com/timothydmorton/plotutils",
     packages = ['plotutils'],
     classifiers=[
-      'Development Status :: 4 - Beta',
+      'Development Status :: 3 - Alpha',
       'Intended Audience :: Science/Research',
       'License :: OSI Approved :: GNU General Public License (GPL)',
       'Operating System :: OS Independent',

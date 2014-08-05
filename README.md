@@ -16,7 +16,7 @@ How to use `setfig`:
 
 This will create a new figure (same as plt.figure() call in matplotlib):
 ```python
-from plotutils.plotutils import setfig
+from plotutils import setfig
 setfig(None)
 ```
 You can also set the current figure to be a given figure number, clear it, and start over, e.g.: `setfig(3)`.
