@@ -1,11 +1,4 @@
-"""
-A module with various plotting utilities
-
-"""
-
-import numpy as np
 import matplotlib.pyplot as plt
-import os,os.path,shutil
 
 def setfig(fig=None,**kwargs):
     """
