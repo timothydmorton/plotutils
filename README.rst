@@ -18,7 +18,6 @@ How to use `setfig`:
 This will create a new figure (same as plt.figure() call in
 matplotlib)::
 
-.. code-block:: python
   from plotutils import setfig
   setfig(None)
 
@@ -29,7 +28,6 @@ You can also set the current figure to be a given figure number, clear it, and s
 I use the `setfig` function in every function that I write that makes
 a plot, almost always as follows::
 
-.. code-block:: python
   import matplotlib.pyplot as plt
   def my_plot(x,y,fig=None,**kwargs):
     setfig(fig)
