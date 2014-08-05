@@ -1,11 +1,11 @@
 from setuptools import setup
 
 def readme():
-    with open('README.md') as f:
+    with open('README.rst') as f:
         return f.read()
 
 setup(name = "plotutils",
-    version = "0.2",
+    version = "0.2.1",
     description = "Simple matplotlib-related utility functions.",
     long_description = readme(),
     author = "Timothy D. Morton",
