@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name = "plotutils",
-    version = "0.2.1",
+    version = "0.3",
     description = "Simple matplotlib-related utility functions.",
     long_description = readme(),
     author = "Timothy D. Morton",
