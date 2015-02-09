@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import logging
 
 def setfig(fig=None,**kwargs):
     """
@@ -61,10 +62,15 @@ def plot2dhist(xdata,ydata,cmap='binary',interpolation='nearest',
         plt.plot(xdata,ydata,**kwargs)
         return
 
+    ok = (~np.isnan(xdata) & ~np.isnan(ydata))
+    if ~ok.sum() > 0:
+        logging.warning('{} x values and {} y values are nan'.format(np.isnan(xdata).sum(),
+                                                                     np.isnan(ydata).sum()))
+
     if xbins is not None and ybins is not None:
-        H,xs,ys = np.histogram2d(xdata,ydata,bins=(xbins,ybins))
+        H,xs,ys = np.histogram2d(xdata[ok],ydata[ok],bins=(xbins,ybins))
     else:
-        H,xs,ys = np.histogram2d(xdata,ydata,bins=(nbins,nbins))        
+        H,xs,ys = np.histogram2d(xdata[ok],ydata[ok],bins=(nbins,nbins))        
     H = H.T
 
     if logscale:
