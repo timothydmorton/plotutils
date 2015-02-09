@@ -62,15 +62,21 @@ def plot2dhist(xdata,ydata,cmap='binary',interpolation='nearest',
         plt.plot(xdata,ydata,**kwargs)
         return
 
-    ok = (~np.isnan(xdata) & ~np.isnan(ydata))
+    ok = (~np.isnan(xdata) & ~np.isnan(ydata) & 
+           ~np.isinf(xdata) & ~np.isinf(ydata))
     if ~ok.sum() > 0:
         logging.warning('{} x values and {} y values are nan'.format(np.isnan(xdata).sum(),
                                                                      np.isnan(ydata).sum()))
+        logging.warning('{} x values and {} y values are inf'.format(np.isinf(xdata).sum(),
+                                                                     np.isinf(ydata).sum()))
+
+    for x,y in zip(xdata[ok],ydata[ok]):
+        print(x,y)
 
     if xbins is not None and ybins is not None:
         H,xs,ys = np.histogram2d(xdata[ok],ydata[ok],bins=(xbins,ybins))
     else:
-        H,xs,ys = np.histogram2d(xdata[ok],ydata[ok],bins=(nbins,nbins))        
+        H,xs,ys = np.histogram2d(xdata[ok],ydata[ok],bins=nbins)        
     H = H.T
 
     if logscale:
