@@ -70,9 +70,6 @@ def plot2dhist(xdata,ydata,cmap='binary',interpolation='nearest',
         logging.warning('{} x values and {} y values are inf'.format(np.isinf(xdata).sum(),
                                                                      np.isinf(ydata).sum()))
 
-    for x,y in zip(xdata[ok],ydata[ok]):
-        print(x,y)
-
     if xbins is not None and ybins is not None:
         H,xs,ys = np.histogram2d(xdata[ok],ydata[ok],bins=(xbins,ybins))
     else:
